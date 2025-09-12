@@ -20,7 +20,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div className="flex flex-col w-full relative bg-amber-400">
+      <div className="flex flex-col w-full relative">
         <PrismicNextImage
           field={slice.primary.hero_img}
           className="w-screen h-[80vh] object-cover"
