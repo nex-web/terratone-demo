@@ -23,7 +23,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       <div className="flex flex-col w-full relative">
         <PrismicNextImage
           field={slice.primary.hero_img}
-          className="w-screen h-[80vh] object-cover"
+          className="w-screen h-[100vh] object-cover"
         />
         {/* <div className="w-screen h-[80vh] object-cover"></div> */}
 
