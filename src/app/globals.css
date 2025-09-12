@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Base sans stack using the Inter variable from layout */
+  --font-sans: var(--font-inter), Arial, Helvetica, sans-serif;
+
+  /* Black slanted Inter */
+  --font-black-slanted: var(--font-inter);
+  --font-black-slanted--font-variation-settings:
+    "wdth" var(--wdth, 100), 
+    "slnt" var(--slnt, -10), 
+    "opsz" var(--opsz, 144),
+    "wght" var(--wght, 500);
+
+  /* Bold slanted Inter */
+  --font-bold-slanted: var(--font-inter);
+  --font-bold-slanted--font-variation-settings:
+    "wdth" var(--wdth, 100), 
+    "slnt" var(--slnt, -10), 
+    "opsz" var(--opsz, 100),
+    "wght" var(--wght, 600);
+}
