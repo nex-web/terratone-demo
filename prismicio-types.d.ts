@@ -69,7 +69,15 @@ type ContentRelationshipFieldWithData<
   >;
 }[Exclude<TCustomType[number], string>["id"]];
 
-type HomepageDocumentDataSlicesSlice = OurStorySlice | HeroSlice;
+type HomepageDocumentDataSlicesSlice =
+  | CuisinesSlice
+  | SliderDemoSlice
+  | HallsSlice
+  | IntroTextSlice
+  | RoomsSlice
+  | RoomCategoriesSlice
+  | OurStorySlice
+  | HeroSlice;
 
 /**
  * Content for Homepage documents
@@ -134,7 +142,242 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = HomepageDocument;
+/**
+ * Content for introReveal documents
+ */
+interface IntrorevealDocumentData {
+  /**
+   * demoIntro field in *introReveal*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: introreveal.demointro
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  demointro: prismic.RichTextField;
+}
+
+/**
+ * introReveal document from Prismic
+ *
+ * - **API ID**: `introreveal`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type IntrorevealDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<IntrorevealDocumentData>,
+    "introreveal",
+    Lang
+  >;
+
+export type AllDocumentTypes = HomepageDocument | IntrorevealDocument;
+
+/**
+ * Primary content in *Cuisines → Default → Primary*
+ */
+export interface CuisinesSliceDefaultPrimary {
+  /**
+   * Heading field in *Cuisines → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cuisines.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * description field in *Cuisines → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cuisines.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * dininglink field in *Cuisines → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cuisines.default.primary.dininglink
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  dininglink: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * linktext field in *Cuisines → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cuisines.default.primary.linktext
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  linktext: prismic.KeyTextField;
+
+  /**
+   * headshot field in *Cuisines → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cuisines.default.primary.headshot
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  headshot: prismic.ImageField<never>;
+
+  /**
+   * chefname field in *Cuisines → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cuisines.default.primary.chefname
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  chefname: prismic.RichTextField;
+
+  /**
+   * chef expertise field in *Cuisines → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cuisines.default.primary.chef_expertise
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  chef_expertise: prismic.RichTextField;
+
+  /**
+   * rightimg field in *Cuisines → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cuisines.default.primary.rightimg
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  rightimg: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Cuisines Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type CuisinesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CuisinesSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Cuisines*
+ */
+type CuisinesSliceVariation = CuisinesSliceDefault;
+
+/**
+ * Cuisines Shared Slice
+ *
+ * - **API ID**: `cuisines`
+ * - **Description**: Cuisines
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type CuisinesSlice = prismic.SharedSlice<
+  "cuisines",
+  CuisinesSliceVariation
+>;
+
+/**
+ * Primary content in *Halls → Default → Primary*
+ */
+export interface HallsSliceDefaultPrimary {
+  /**
+   * Heading field in *Halls → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: halls.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * Image field in *Halls → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: halls.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * secondcol_img field in *Halls → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: halls.default.primary.secondcol_img
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  secondcol_img: prismic.ImageField<never>;
+
+  /**
+   * thirdcol_img field in *Halls → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: halls.default.primary.thirdcol_img
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  thirdcol_img: prismic.ImageField<never>;
+
+  /**
+   * thirdDescription field in *Halls → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: halls.default.primary.thirddescription
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  thirddescription: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Halls Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type HallsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HallsSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Halls*
+ */
+type HallsSliceVariation = HallsSliceDefault;
+
+/**
+ * Halls Shared Slice
+ *
+ * - **API ID**: `halls`
+ * - **Description**: Halls
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type HallsSlice = prismic.SharedSlice<"halls", HallsSliceVariation>;
 
 /**
  * Primary content in *Hero → Hero → Primary*
@@ -223,6 +466,51 @@ type HeroSliceVariation = HeroSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slices
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
+
+/**
+ * Primary content in *IntroText → Default → Primary*
+ */
+export interface IntroTextSliceDefaultPrimary {
+  /**
+   * revealingText field in *IntroText → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: intro_text.default.primary.revealingtext
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  revealingtext: prismic.RichTextField;
+}
+
+/**
+ * Default variation for IntroText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type IntroTextSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<IntroTextSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *IntroText*
+ */
+type IntroTextSliceVariation = IntroTextSliceDefault;
+
+/**
+ * IntroText Shared Slice
+ *
+ * - **API ID**: `intro_text`
+ * - **Description**: IntroText
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type IntroTextSlice = prismic.SharedSlice<
+  "intro_text",
+  IntroTextSliceVariation
+>;
 
 /**
  * Primary content in *OurStory → Default → Primary*
@@ -320,6 +608,114 @@ export type OurStorySlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *RoomCategories → Default → Primary → Categories*
+ */
+export interface RoomCategoriesSliceDefaultPrimaryCategoriesItem {
+  /**
+   * roomimage field in *RoomCategories → Default → Primary → Categories*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: room_categories.default.primary.categories[].roomimage
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  roomimage: prismic.ImageField<never>;
+
+  /**
+   * title field in *RoomCategories → Default → Primary → Categories*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: room_categories.default.primary.categories[].title
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * bookinglink field in *RoomCategories → Default → Primary → Categories*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: room_categories.default.primary.categories[].bookinglink
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  bookinglink: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * linktext field in *RoomCategories → Default → Primary → Categories*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: room_categories.default.primary.categories[].linktext
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  linktext: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *RoomCategories → Default → Primary*
+ */
+export interface RoomCategoriesSliceDefaultPrimary {
+  /**
+   * roomsHeading field in *RoomCategories → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: room_categories.default.primary.roomsheading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  roomsheading: prismic.RichTextField;
+
+  /**
+   * Categories field in *RoomCategories → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: room_categories.default.primary.categories[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  categories: prismic.GroupField<
+    Simplify<RoomCategoriesSliceDefaultPrimaryCategoriesItem>
+  >;
+}
+
+/**
+ * Default variation for RoomCategories Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type RoomCategoriesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<RoomCategoriesSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *RoomCategories*
+ */
+type RoomCategoriesSliceVariation = RoomCategoriesSliceDefault;
+
+/**
+ * RoomCategories Shared Slice
+ *
+ * - **API ID**: `room_categories`
+ * - **Description**: RoomCategories
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type RoomCategoriesSlice = prismic.SharedSlice<
+  "room_categories",
+  RoomCategoriesSliceVariation
+>;
+
+/**
  * Primary content in *Rooms → Default → Primary*
  */
 export interface RoomsSliceDefaultPrimary {
@@ -332,6 +728,56 @@ export interface RoomsSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/fields/rich-text
    */
   heading: prismic.RichTextField;
+
+  /**
+   * subtext field in *Rooms → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: rooms.default.primary.subtext
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  subtext: prismic.RichTextField;
+
+  /**
+   * button field in *Rooms → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: rooms.default.primary.button
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  button: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+  /**
+   * view rooms field in *Rooms → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: rooms.default.primary.view_rooms
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  view_rooms: prismic.KeyTextField;
+
+  /**
+   * roomimage field in *Rooms → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: rooms.default.primary.roomimage
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  roomimage: prismic.ImageField<never>;
+
+  /**
+   * roomimagetwo field in *Rooms → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: rooms.default.primary.roomviewtwo
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  roomviewtwo: prismic.ImageField<never>;
 }
 
 /**
@@ -361,6 +807,111 @@ type RoomsSliceVariation = RoomsSliceDefault;
  */
 export type RoomsSlice = prismic.SharedSlice<"rooms", RoomsSliceVariation>;
 
+/**
+ * Primary content in *SliderDemo → Default → Primary*
+ */
+export interface SliderDemoSliceDefaultPrimary {
+  /**
+   * sliderimg field in *SliderDemo → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: slider_demo.default.primary.sliderimg
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  sliderimg: prismic.ImageField<never>;
+
+  /**
+   * heading field in *SliderDemo → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: slider_demo.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  heading: prismic.RichTextField;
+
+  /**
+   * description field in *SliderDemo → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: slider_demo.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * rightimg field in *SliderDemo → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: slider_demo.default.primary.rightimg
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  rightimg: prismic.ImageField<never>;
+
+  /**
+   * rightheading field in *SliderDemo → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: slider_demo.default.primary.rightheading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  rightheading: prismic.RichTextField;
+
+  /**
+   * rightdescription field in *SliderDemo → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: slider_demo.default.primary.rightdescription
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  rightdescription: prismic.RichTextField;
+
+  /**
+   * rightimgtwo field in *SliderDemo → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: slider_demo.default.primary.rightimgtwo
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  rightimgtwo: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for SliderDemo Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type SliderDemoSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SliderDemoSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SliderDemo*
+ */
+type SliderDemoSliceVariation = SliderDemoSliceDefault;
+
+/**
+ * SliderDemo Shared Slice
+ *
+ * - **API ID**: `slider_demo`
+ * - **Description**: SliderDemo
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type SliderDemoSlice = prismic.SharedSlice<
+  "slider_demo",
+  SliderDemoSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -385,19 +936,42 @@ declare module "@prismicio/client" {
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
+      IntrorevealDocument,
+      IntrorevealDocumentData,
       AllDocumentTypes,
+      CuisinesSlice,
+      CuisinesSliceDefaultPrimary,
+      CuisinesSliceVariation,
+      CuisinesSliceDefault,
+      HallsSlice,
+      HallsSliceDefaultPrimary,
+      HallsSliceVariation,
+      HallsSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      IntroTextSlice,
+      IntroTextSliceDefaultPrimary,
+      IntroTextSliceVariation,
+      IntroTextSliceDefault,
       OurStorySlice,
       OurStorySliceDefaultPrimary,
       OurStorySliceVariation,
       OurStorySliceDefault,
+      RoomCategoriesSlice,
+      RoomCategoriesSliceDefaultPrimaryCategoriesItem,
+      RoomCategoriesSliceDefaultPrimary,
+      RoomCategoriesSliceVariation,
+      RoomCategoriesSliceDefault,
       RoomsSlice,
       RoomsSliceDefaultPrimary,
       RoomsSliceVariation,
       RoomsSliceDefault,
+      SliderDemoSlice,
+      SliderDemoSliceDefaultPrimary,
+      SliderDemoSliceVariation,
+      SliderDemoSliceDefault,
     };
   }
 }

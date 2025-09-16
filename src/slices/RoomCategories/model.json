@@ -1,0 +1,72 @@
+{
+  "id": "room_categories",
+  "type": "SharedSlice",
+  "name": "RoomCategories",
+  "description": "RoomCategories",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "roomsheading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "roomsHeading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2,heading3,heading4,heading5,heading6,paragraph"
+          }
+        },
+        "categories": {
+          "type": "Group",
+          "config": {
+            "label": "Categories",
+            "repeat": true,
+            "fields": {
+              "roomimage": {
+                "type": "Image",
+                "config": {
+                  "label": "roomimage",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "title",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "bookinglink": {
+                "type": "Link",
+                "config": {
+                  "label": "bookinglink",
+                  "placeholder": "",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
+                }
+              },
+              "linktext": {
+                "type": "Text",
+                "config": {
+                  "label": "linktext",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

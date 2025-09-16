@@ -1,0 +1,89 @@
+{
+  "id": "cuisines",
+  "type": "SharedSlice",
+  "name": "Cuisines",
+  "description": "Cuisines",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "dininglink": {
+          "type": "Link",
+          "config": {
+            "label": "dininglink",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "linktext": {
+          "type": "Text",
+          "config": {
+            "label": "linktext",
+            "placeholder": ""
+          }
+        },
+        "headshot": {
+          "type": "Image",
+          "config": {
+            "label": "headshot",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "chefname": {
+          "type": "StructuredText",
+          "config": {
+            "label": "chefname",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "chef_expertise": {
+          "type": "StructuredText",
+          "config": {
+            "label": "chef expertise",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "rightimg": {
+          "type": "Image",
+          "config": {
+            "label": "rightimg",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

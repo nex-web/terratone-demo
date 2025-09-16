@@ -1,0 +1,61 @@
+{
+  "id": "halls",
+  "type": "SharedSlice",
+  "name": "Halls",
+  "description": "Halls",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "secondcol_img": {
+          "type": "Image",
+          "config": {
+            "label": "secondcol_img",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "thirdcol_img": {
+          "type": "Image",
+          "config": {
+            "label": "thirdcol_img",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "thirddescription": {
+          "type": "StructuredText",
+          "config": {
+            "label": "thirdDescription",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

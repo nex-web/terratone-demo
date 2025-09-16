@@ -9,10 +9,87 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Nulla nisi est in velit amet. Ex reprehenderit aliqua quis ullamco qui exercitation duis adipisicing occaecat cillum adipisicing laborum occaecat. Sint dolore ex ad est nulla fugiat quis dolore enim enim."
-						}
+							"text": "A boutique \nstay nestled in Kollam",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
+			},
+			"subtext": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "A vibrant district of Kerala celebrated for its cashew, fishing, and coir industries, terratone offers a privileged retreat just a stone's throw from the serene Ashtamudi Lake and the majestic Arabian Sea.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"button": {
+				"key": "db6a35b7-fbd1-4345-bcdf-d773dc087dfc",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "pull"
+				}
+			},
+			"roomimage": {
+				"provider": "imgix",
+				"url": "https://images.unsplash.com/photo-1546548970-71785318a17b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NTc2ODk2MDl8MA&ixlib=rb-4.1.0&q=85",
+				"alt": "flat lay photography of sliced pomegranate, lime, and lemon",
+				"origin": {
+					"id": "7r1HxvVC7AY",
+					"url": "https://images.unsplash.com/photo-1546548970-71785318a17b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NTc2ODk2MDl8MA&ixlib=rb-4.1.0&q=85",
+					"width": 3104,
+					"height": 4656
+				},
+				"width": 3104,
+				"height": 4656,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"roomviewtwo": {
+				"provider": "imgix",
+				"url": "https://images.unsplash.com/photo-1687707937506-c8cefdee5bfc?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxOXx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzU3Njg5NjA5fDA&ixlib=rb-4.1.0&q=85",
+				"alt": "an orange hanging from a tree with leaves",
+				"origin": {
+					"id": "w9tRXiBvJtM",
+					"url": "https://images.unsplash.com/photo-1687707937506-c8cefdee5bfc?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxOXx8Y2l0cnVzJTIwZnJ1aXR8ZW58MHx8fHwxNzU3Njg5NjA5fDA&ixlib=rb-4.1.0&q=85",
+					"width": 3000,
+					"height": 2001
+				},
+				"width": 3000,
+				"height": 2001,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"view_rooms": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "View Rooms"
 			}
 		},
 		"items": []

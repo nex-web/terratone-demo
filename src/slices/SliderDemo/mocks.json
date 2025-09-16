@@ -1,0 +1,124 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"sliderimg": {
+				"provider": "imgix",
+				"url": "https://images.unsplash.com/photo-1597589022928-bb4002c099ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwzfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NTc4Mjk5MzV8MA&ixlib=rb-4.1.0&q=85",
+				"alt": "yellow lemon fruit beside green leaves",
+				"origin": {
+					"id": "3t8rQ3LD2JI",
+					"url": "https://images.unsplash.com/photo-1597589022928-bb4002c099ec?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwzfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NTc4Mjk5MzV8MA&ixlib=rb-4.1.0&q=85",
+					"width": 3024,
+					"height": 3024
+				},
+				"width": 3024,
+				"height": 3024,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ipsum veniam aliqua occaecat nostrud sit ipsum occaecat esse dolor pariatur velit ipsum voluptate."
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nostrud anim et est pariatur duis fugiat proident sit non consectetur deserunt veniam."
+						}
+					}
+				]
+			},
+			"rightdescription": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Elit ut magna Lorem aute irure duis non duis occaecat esse elit consequat reprehenderit."
+						}
+					}
+				]
+			},
+			"rightheading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Built with consciousness",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"rightimg": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+					"width": 4016,
+					"height": 6016
+				},
+				"url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+				"width": 4016,
+				"height": 6016,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "some",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"rightimgtwo": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+					"width": 5243,
+					"height": 3495
+				},
+				"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+				"width": 5243,
+				"height": 3495,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "putting",
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]

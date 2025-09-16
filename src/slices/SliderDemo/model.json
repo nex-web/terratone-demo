@@ -1,8 +1,8 @@
 {
-  "id": "rooms",
+  "id": "slider_demo",
   "type": "SharedSlice",
-  "name": "Rooms",
-  "description": "Rooms",
+  "name": "SliderDemo",
+  "description": "SliderDemo",
   "variations": [
     {
       "id": "default",
@@ -12,6 +12,14 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "sliderimg": {
+          "type": "Image",
+          "config": {
+            "label": "sliderimg",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
         "heading": {
           "type": "StructuredText",
           "config": {
@@ -21,45 +29,45 @@
             "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "subtext": {
+        "description": {
           "type": "StructuredText",
           "config": {
-            "label": "subtext",
+            "label": "description",
             "placeholder": "",
             "allowTargetBlank": true,
             "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "button": {
-          "type": "Link",
-          "config": {
-            "label": "button",
-            "placeholder": "",
-            "select": null,
-            "allowTargetBlank": true,
-            "allowText": true,
-            "repeat": false
-          }
-        },
-        "view_rooms": {
-          "type": "Text",
-          "config": {
-            "label": "view rooms",
-            "placeholder": ""
-          }
-        },
-        "roomimage": {
+        "rightimg": {
           "type": "Image",
           "config": {
-            "label": "roomimage",
+            "label": "rightimg",
             "constraint": {},
             "thumbnails": []
           }
         },
-        "roomviewtwo": {
+        "rightheading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "rightheading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "rightdescription": {
+          "type": "StructuredText",
+          "config": {
+            "label": "rightdescription",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "rightimgtwo": {
           "type": "Image",
           "config": {
-            "label": "roomimagetwo",
+            "label": "rightimgtwo",
             "constraint": {},
             "thumbnails": []
           }

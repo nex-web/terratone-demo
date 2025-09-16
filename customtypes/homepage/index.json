@@ -11,6 +11,24 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "cuisines": {
+              "type": "SharedSlice"
+            },
+            "slider_demo": {
+              "type": "SharedSlice"
+            },
+            "halls": {
+              "type": "SharedSlice"
+            },
+            "intro_text": {
+              "type": "SharedSlice"
+            },
+            "rooms": {
+              "type": "SharedSlice"
+            },
+            "room_categories": {
+              "type": "SharedSlice"
+            },
             "our_story": {
               "type": "SharedSlice"
             },

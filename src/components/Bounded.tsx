@@ -4,8 +4,8 @@ type BoundedProps = {
   as?: React.ElementType;
   className?: string;
   children: React.ReactNode;
-  full?: boolean;
-  noPadding?: boolean;
+  full?: boolean;       // full-width content
+  noPadding?: boolean;  // remove vertical padding
 };
 
 export default function Bounded({
@@ -19,15 +19,18 @@ export default function Bounded({
   return (
     <Comp
       className={clsx(
-        noPadding ? "" : "px-4 py-10 md:py-14 md:px-6 lg:py-16",
+        // vertical padding
+        noPadding ? "" : "py-10 md:py-14 lg:py-16",
+        // horizontal padding only if not full
+        full ? "" : "px-[1.875rem]",
         className
       )}
       {...restProps}
     >
       <div
         className={clsx(
-          "w-full",
-          full ? "mx-0 max-w-none" : "mx-auto max-w-6xl"
+          "w-full mx-auto",
+          full ? "mx-0 max-w-none" : "max-w-6xl xl:max-w-[1440px]"
         )}
       >
         {children}

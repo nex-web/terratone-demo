@@ -1,0 +1,189 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"categories": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"roomimage",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+										"width": 4024,
+										"height": 4024
+									},
+									"url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+									"width": 4024,
+									"height": 4024,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "snow",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Deluxe Suite",
+												"spans": []
+											},
+											"direction": "ltr"
+										}
+									]
+								}
+							],
+							[
+								"linktext",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Book Deluxe Suite ->"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"title",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "asdasd",
+												"spans": []
+											},
+											"direction": "ltr"
+										}
+									]
+								}
+							],
+							[
+								"bookinglink",
+								{
+									"key": "d0f51fbc-454d-4e51-aaa6-d431e3ac5df7",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "AnyLink",
+										"kind": "any",
+										"text": ""
+									}
+								}
+							],
+							[
+								"linktext",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "beneath",
+									"type": "Text"
+								}
+							],
+							[
+								"roomimage",
+								{
+									"__TYPE__": "ImageContent",
+									"provider": "imgix",
+									"url": "https://images.unsplash.com/photo-1546548970-71785318a17b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NTc2ODk2MDl8MA&ixlib=rb-4.1.0&q=85",
+									"alt": "flat lay photography of sliced pomegranate, lime, and lemon",
+									"origin": {
+										"id": "7r1HxvVC7AY",
+										"url": "https://images.unsplash.com/photo-1546548970-71785318a17b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NTc2ODk2MDl8MA&ixlib=rb-4.1.0&q=85",
+										"width": 3104,
+										"height": 4656
+									},
+									"width": 3104,
+									"height": 4656,
+									"edit": {
+										"background": "transparent",
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										}
+									},
+									"thumbnails": {}
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"roomimage",
+								{
+									"__TYPE__": "ImageContent",
+									"provider": "imgix",
+									"url": "https://images.unsplash.com/photo-1629122998682-9f01c0fa89ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NTc2ODk2MDl8MA&ixlib=rb-4.1.0&q=85",
+									"alt": "orange fruits on green leaves",
+									"origin": {
+										"id": "_ANDM3OI4gE",
+										"url": "https://images.unsplash.com/photo-1629122998682-9f01c0fa89ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw3fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NTc2ODk2MDl8MA&ixlib=rb-4.1.0&q=85",
+										"width": 3024,
+										"height": 4032
+									},
+									"width": 3024,
+									"height": 4032,
+									"edit": {
+										"background": "transparent",
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										}
+									},
+									"thumbnails": {}
+								}
+							]
+						],
+						"key": "d961eaec-9706-4771-af69-16ce46ac25d6"
+					}
+				]
+			},
+			"roomsheading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Experience the essence of home,",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": " in every nook at terratone.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

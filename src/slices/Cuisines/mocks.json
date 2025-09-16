@@ -1,0 +1,112 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Commodo nulla dolore sit. Ea ipsum officia mollit minim excepteur irure eu consequat ad minim dolor. Adipisicing ex tempor magna eu cillum proident occaecat est nostrud est voluptate occaecat."
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ea ipsum laborum velit ipsum aute et eiusmod consequat enim."
+						}
+					}
+				]
+			},
+			"dininglink": {
+				"key": "7c5ea8f8-9933-4307-aa3f-497f3400778f",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "pool"
+				}
+			},
+			"linktext": {
+				"__TYPE__": "FieldContent",
+				"value": "guess",
+				"type": "Text"
+			},
+			"headshot": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+					"width": 12288,
+					"height": 16384
+				},
+				"url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+				"width": 12288,
+				"height": 16384,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "no",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"chefname": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Enim minim laborum culpa sint. Quis duis sit nostrud labore mollit minim laboris elit nulla pariatur Lorem sit."
+						}
+					}
+				]
+			},
+			"chef_expertise": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Aute laboris do amet minim sit occaecat ex cillum enim ut enim id officia. Dolor enim consequat ipsum nostrud pariatur. Laborum dolor cupidatat elit pariatur ipsum."
+						}
+					}
+				]
+			},
+			"rightimg": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+					"width": 3168,
+					"height": 4752
+				},
+				"url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+				"width": 3168,
+				"height": 4752,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "remain",
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]
