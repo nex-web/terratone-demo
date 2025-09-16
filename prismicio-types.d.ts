@@ -69,6 +69,122 @@ type ContentRelationshipFieldWithData<
   >;
 }[Exclude<TCustomType[number], string>["id"]];
 
+/**
+ * Item in *head → Navigation Bar*
+ */
+export interface HeadDocumentDataNavigationBarItem {
+  /**
+   * Link field in *head → Navigation Bar*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: head.navigation_bar[].link
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+  /**
+   * Lable field in *head → Navigation Bar*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: head.navigation_bar[].lable
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  lable: prismic.KeyTextField;
+}
+
+/**
+ * Content for head documents
+ */
+interface HeadDocumentData {
+  /**
+   * Navigation Bar field in *head*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: head.navigation_bar[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  navigation_bar: prismic.GroupField<
+    Simplify<HeadDocumentDataNavigationBarItem>
+  >;
+
+  /**
+   * Site Title field in *head*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: head.site_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  site_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *head*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: head.meta_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * OG Image field in *head*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: head.og_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  og_image: prismic.ImageField<never>;
+
+  /**
+   * Link Button field in *head*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: head.link_button
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  link_button: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * Button Text field in *head*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: head.button_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  button_text: prismic.KeyTextField;
+}
+
+/**
+ * head document from Prismic
+ *
+ * - **API ID**: `head`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HeadDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<Simplify<HeadDocumentData>, "head", Lang>;
+
 type HomepageDocumentDataSlicesSlice =
   | CtaSlice
   | CuisinesSlice
@@ -175,7 +291,10 @@ export type IntrorevealDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = HomepageDocument | IntrorevealDocument;
+export type AllDocumentTypes =
+  | HeadDocument
+  | HomepageDocument
+  | IntrorevealDocument;
 
 /**
  * Primary content in *Cta → Default → Primary*
@@ -1022,6 +1141,9 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      HeadDocument,
+      HeadDocumentData,
+      HeadDocumentDataNavigationBarItem,
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,

@@ -13,15 +13,18 @@ export type IntroTextProps = SliceComponentProps<Content.IntroTextSlice>;
  */
 const IntroText: FC<IntroTextProps> = ({ slice }) => {
   return (
-    <Bounded
+    <Bounded className="my-28"
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
+      <div>
+
+      </div>
       <PrismicRichText
         field={slice.primary.revealingtext}
         components={{
           paragraph: ({ children }) => (
-            <p className="text-black text-lg leading-relaxed">{children}</p>
+            <p className="text-[#515151] text-[1.8rem] text-center leading-tight font-black-slanted ">{children}</p>
           ),
         }}
       />

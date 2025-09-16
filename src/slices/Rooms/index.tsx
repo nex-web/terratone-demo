@@ -32,16 +32,16 @@ const Rooms: FC<RoomsProps> = ({ slice }) => {
         />
       </div>
       <div className="grid grid-cols-2">
-        <div className="flex flex-col relative">
+        <div className="flex flex-col relative mr-4">
           <PrismicRichText
             field={slice.primary.subtext}
             components={{
               paragraph: ({ children }) => (
-                <p className="text-sm font-black-slanted ">{children}</p>
+                <p className="text-sm font-black-slanted mt-4 w-[55%] ">{children}</p>
               ),
             }}
           />
-          <PrismicNextLink field={slice.primary.button}>
+          <PrismicNextLink field={slice.primary.button} className="mt-10 underline text-sm">
             {slice.primary.view_rooms}
           </PrismicNextLink>
           <PrismicNextImage

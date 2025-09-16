@@ -50,12 +50,12 @@ const RoomCategories: FC<RoomCategoriesProps> = ({ slice }) => {
                   ),
                 }}
               />
-              <PrismicNextLink
+              {/* <PrismicNextLink
                 field={item.bookinglink}
-                className="text-xs  font-black-slanted underline"
+                className="text-xs  font-black-slanted underline bg-amber-600"
               >
                 {item.linktext}
-              </PrismicNextLink>
+              </PrismicNextLink> */}
             </div>
           </div>
         ))}
