@@ -70,6 +70,7 @@ type ContentRelationshipFieldWithData<
 }[Exclude<TCustomType[number], string>["id"]];
 
 type HomepageDocumentDataSlicesSlice =
+  | CtaSlice
   | CuisinesSlice
   | SliderDemoSlice
   | HallsSlice
@@ -175,6 +176,94 @@ export type IntrorevealDocument<Lang extends string = string> =
   >;
 
 export type AllDocumentTypes = HomepageDocument | IntrorevealDocument;
+
+/**
+ * Primary content in *Cta → Default → Primary*
+ */
+export interface CtaSliceDefaultPrimary {
+  /**
+   * ctaimg field in *Cta → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cta.default.primary.ctaimg
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  ctaimg: prismic.ImageField<never>;
+
+  /**
+   * ctaheading field in *Cta → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cta.default.primary.ctaheading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  ctaheading: prismic.RichTextField;
+
+  /**
+   * ctadescription field in *Cta → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cta.default.primary.ctadescription
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  ctadescription: prismic.RichTextField;
+
+  /**
+   * ctalink field in *Cta → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cta.default.primary.ctalink
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  ctalink: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * ctalinktext field in *Cta → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cta.default.primary.ctalinktext
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  ctalinktext: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Cta Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type CtaSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CtaSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Cta*
+ */
+type CtaSliceVariation = CtaSliceDefault;
+
+/**
+ * Cta Shared Slice
+ *
+ * - **API ID**: `cta`
+ * - **Description**: Cta
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type CtaSlice = prismic.SharedSlice<"cta", CtaSliceVariation>;
 
 /**
  * Primary content in *Cuisines → Default → Primary*
@@ -939,6 +1028,10 @@ declare module "@prismicio/client" {
       IntrorevealDocument,
       IntrorevealDocumentData,
       AllDocumentTypes,
+      CtaSlice,
+      CtaSliceDefaultPrimary,
+      CtaSliceVariation,
+      CtaSliceDefault,
       CuisinesSlice,
       CuisinesSliceDefaultPrimary,
       CuisinesSliceVariation,

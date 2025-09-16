@@ -1,0 +1,63 @@
+{
+  "id": "cta",
+  "type": "SharedSlice",
+  "name": "Cta",
+  "description": "Cta",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "ctaimg": {
+          "type": "Image",
+          "config": {
+            "label": "ctaimg",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "ctaheading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "ctaheading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "ctadescription": {
+          "type": "StructuredText",
+          "config": {
+            "label": "ctadescription",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "ctalink": {
+          "type": "Link",
+          "config": {
+            "label": "ctalink",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "ctalinktext": {
+          "type": "Text",
+          "config": {
+            "label": "ctalinktext",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

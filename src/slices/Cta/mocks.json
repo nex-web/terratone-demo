@@ -1,0 +1,68 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"ctaimg": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+					"width": 5000,
+					"height": 4613
+				},
+				"url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+				"width": 5000,
+				"height": 4613,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "bad",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"ctaheading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Aute elit do est sunt. Eiusmod ipsum consequat commodo proident excepteur veniam ullamco excepteur nulla cillum. Incididunt qui labore amet nulla magna incididunt excepteur duis laboris magna aute deserunt anim."
+						}
+					}
+				]
+			},
+			"ctadescription": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Labore nulla consectetur veniam magna incididunt officia deserunt commodo in eu est fugiat. Nisi aliqua ipsum consequat esse velit. Nulla ad mollit pariatur eu aliquip reprehenderit fugiat sunt sit aute velit dolore ea voluptate reprehenderit."
+						}
+					}
+				]
+			},
+			"ctalink": {
+				"key": "44cc9736-0fbe-4fab-a596-22be8fc20947",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "sky"
+				}
+			},
+			"ctalinktext": {
+				"__TYPE__": "FieldContent",
+				"value": "pan",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
