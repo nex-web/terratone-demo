@@ -18,27 +18,56 @@ const Cuisines: FC<CuisinesProps> = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div className="flex flex-row">
+      <div className="flex flex-row justify-between items-center">
         <div>
-          <div>
-            <PrismicRichText field={slice.primary.heading} />
-            <PrismicRichText field={slice.primary.description} />
-            <PrismicNextLink field={slice.primary.dininglink}>
-              {slice.primary.linktext}
-            </PrismicNextLink>
-          </div>
-          <div>
+          <div className="flex  flex-col">
             <div>
-              <PrismicNextImage field={slice.primary.headshot} />
+              <PrismicRichText
+                field={slice.primary.heading}
+                components={{
+                  paragraph: ({ children }) => (
+                    <p className="text-5xl  font-black-slanted">{children}</p>
+                  ),
+                }}
+              />
             </div>
-            <div>
+            <div className="my-5">
+              <PrismicRichText
+                field={slice.primary.description}
+                components={{
+                  paragraph: ({ children }) => (
+                    <p className="text-sm  font-black-slanted">{children}</p>
+                  ),
+                }}
+              />
+            </div>
+            <div className="mb-5">
+              <PrismicNextLink
+                field={slice.primary.dininglink}
+                className="text-sm underline"
+              >
+                {slice.primary.linktext}
+              </PrismicNextLink>
+            </div>
+          </div>
+          <div className="flex flex-row items-end gap-4 mt-4 ">
+            <div className="w-[9.94rem] h-[11.75rem] ">
+              <PrismicNextImage
+                field={slice.primary.headshot}
+                className="w-[9.94rem] h-[11.75rem]"
+              />
+            </div>
+            <div className="flex flex-col justify-center mb-[-6px] ">
               <PrismicRichText field={slice.primary.chefname} />
-              <PrismicRichText field={slice.primary.chef_expertise} />
+              <PrismicRichText field={slice.primary.chef_expertise}  />
             </div>
           </div>
         </div>
-        <div>
-          <PrismicNextImage field={slice.primary.rightimg} />
+        <div className="w-[47.06rem] h-[40.06rem]">
+          <PrismicNextImage
+            field={slice.primary.rightimg}
+            className="w-[47.06rem] h-[40.06rem]"
+          />
         </div>
       </div>
     </Bounded>

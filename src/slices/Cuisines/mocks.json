@@ -9,8 +9,18 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Commodo nulla dolore sit. Ea ipsum officia mollit minim excepteur irure eu consequat ad minim dolor. Adipisicing ex tempor magna eu cillum proident occaecat est nostrud est voluptate occaecat."
-						}
+							"text": "Global Cuisine, ",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Seasoned locally.",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
@@ -20,24 +30,33 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Ea ipsum laborum velit ipsum aute et eiusmod consequat enim."
-						}
+							"text": "Savor global cuisine elevated with the vibrant, authentic tastes of Kollam ",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "and Kerala. Every dish is crafted with fresh regional produce bringing the ",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "world to your table, enriched by the essence of our land.",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
-			"dininglink": {
-				"key": "7c5ea8f8-9933-4307-aa3f-497f3400778f",
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://slicemachine.dev",
-					"text": "pool"
-				}
-			},
 			"linktext": {
 				"__TYPE__": "FieldContent",
-				"value": "guess",
-				"type": "Text"
+				"type": "Text",
+				"value": "View Dining"
 			},
 			"headshot": {
 				"origin": {
@@ -68,8 +87,10 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Enim minim laborum culpa sint. Quis duis sit nostrud labore mollit minim laboris elit nulla pariatur Lorem sit."
-						}
+							"text": "Chef's Name",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
@@ -79,13 +100,14 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Aute laboris do amet minim sit occaecat ex cillum enim ut enim id officia. Dolor enim consequat ipsum nostrud pariatur. Laborum dolor cupidatat elit pariatur ipsum."
-						}
+							"text": "Expertise goes here",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
 			"rightimg": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
@@ -104,7 +126,17 @@
 					"background": "transparent"
 				},
 				"alt": "remain",
+				"credits": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"dininglink": {
+				"__TYPE__": "LinkContent",
+				"key": "5442f5a6-c4ff-47ed-8587-f4e199249478",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://www.google.com"
+				}
 			}
 		},
 		"items": []
