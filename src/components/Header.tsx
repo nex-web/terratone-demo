@@ -8,7 +8,7 @@ export default async function Header() {
   const client = createClient();
   const head = await client.getSingle("head");
   return (
-    <section className="absolute top-0 left-0 w-full z-50">
+    <Bounded full className="absolute top-0 left-0 w-full z-50">
       <div className="flex items-center justify-between relative p-3 font-black-slanted">
         <nav>
           <ul className="flex items-center ">
@@ -26,8 +26,10 @@ export default async function Header() {
           <Logo />
         </Link>
 
-        <button className="px-6 py-3 bg-black text-white text-sm rounded-4xl mr-4">Book Now</button>
+        <button className="px-6 py-3 bg-black text-white text-sm rounded-4xl mr-4 ">
+          Book Now
+        </button>
       </div>
-    </section>
+    </Bounded>
   );
 }

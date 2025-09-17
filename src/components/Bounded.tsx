@@ -30,7 +30,7 @@ export default function Bounded({
       <div
         className={clsx(
           "w-full",
-          full ? "max-w-none" : "mx-auto max-w-6xl xl:max-w-[1440px]"
+          full ? "max-w-none" : "mx-auto max-w-[72rem] xl:max-w-[1440px]"
         )}
       >
         {children}
