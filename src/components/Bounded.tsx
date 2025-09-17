@@ -19,10 +19,10 @@ export default function Bounded({
   return (
     <Comp
       className={clsx(
-        // vertical padding
-        noPadding ? "" : "py-10 md:py-14 lg:py-16",
         // horizontal padding only if not full
         full ? "w-full max-w-none" : "px-[1.875rem]",
+        // responsive bottom margin
+        "mb-[6rem] md:mb-[12rem] lg:mb-[18.75rem]",
         className
       )}
       {...restProps}

@@ -20,7 +20,7 @@ const Halls: FC<HallsProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
     >
       <div className="grid grid-cols-[2fr_auto_1.5fr] gap-8">
-        <div className="relative flex flex-col justify-between h-96 ">
+        <div className="relative flex flex-col justify-between h-auto ">
           {slice.primary.heading && (
             <h1 className="text-5xl font-medium leading-snug">
               <PrismicRichText field={slice.primary.heading} />

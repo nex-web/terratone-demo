@@ -15,11 +15,10 @@ export type OurStoryProps = SliceComponentProps<Content.OurStorySlice>;
 const OurStory: FC<OurStoryProps> = ({ slice }) => {
   return (
     <Bounded
-      className="pt-[18.75rem]"
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div className="flex flex-col pt-[14.75rem] items-center">
+      <div className="flex flex-col items-center">
         <PrismicRichText
           field={slice.primary.storyheading}
           components={{

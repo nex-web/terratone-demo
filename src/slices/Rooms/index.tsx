@@ -15,7 +15,7 @@ export type RoomsProps = SliceComponentProps<Content.RoomsSlice>;
 const Rooms: FC<RoomsProps> = ({ slice }) => {
   return (
     <Bounded
-      className="px-[30px]"
+      className="px-[1.875rem] pt-0  "
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
@@ -37,11 +37,16 @@ const Rooms: FC<RoomsProps> = ({ slice }) => {
             field={slice.primary.subtext}
             components={{
               paragraph: ({ children }) => (
-                <p className="text-sm font-black-slanted mt-4 w-[55%] ">{children}</p>
+                <p className="text-sm font-black-slanted mt-4 w-[55%] ">
+                  {children}
+                </p>
               ),
             }}
           />
-          <PrismicNextLink field={slice.primary.button} className="mt-10 underline text-sm">
+          <PrismicNextLink
+            field={slice.primary.button}
+            className="mt-10 underline text-sm"
+          >
             {slice.primary.view_rooms}
           </PrismicNextLink>
           <PrismicNextImage
@@ -49,10 +54,10 @@ const Rooms: FC<RoomsProps> = ({ slice }) => {
             className="w-[10.5rem] h-[12.6875rem] absolute bottom-0 right-0"
           />
         </div>
-        <div className="relative ">
+        <div className="relative w-auto ">
           <PrismicNextImage
             field={slice.primary.roomviewtwo}
-            className=" h-[29.9375rem] w-[44.5rem]  abolute bottom-0 right-0"
+            className=" h-[29.9375rem] w-auto  abolute bottom-0 right-0"
           />
         </div>
       </div>

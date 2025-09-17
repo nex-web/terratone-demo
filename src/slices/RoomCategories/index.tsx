@@ -29,15 +29,15 @@ const RoomCategories: FC<RoomCategoriesProps> = ({ slice }) => {
           ),
         }}
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-9 px-14">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-9 px-25">
         {slice.primary.categories.map((item, index) => (
           <div
             key={index}
-            className="relative flex justify-center items-center"
+            className=" group relative flex justify-center items-center"
           >
             <PrismicNextImage
               field={item.roomimage}
-              className="w-[371px] h-[479px] object-cover"
+              className="  w-[23.19rem] h-[29.94rem]  object-cover"
             />
             <div className="absolute flex flex-col items-center">
               <PrismicRichText
@@ -50,12 +50,12 @@ const RoomCategories: FC<RoomCategoriesProps> = ({ slice }) => {
                   ),
                 }}
               />
-              {/* <PrismicNextLink
+              <PrismicNextLink
                 field={item.bookinglink}
-                className="text-xs  font-black-slanted underline bg-amber-600"
+                className="opacity-0 group-hover:opacity-100 transition duration-500 text-xs font-black-slanted underline "
               >
                 {item.linktext}
-              </PrismicNextLink> */}
+              </PrismicNextLink>
             </div>
           </div>
         ))}
