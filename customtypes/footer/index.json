@@ -1,0 +1,262 @@
+{
+  "format": "custom",
+  "id": "footer",
+  "label": "Footer",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "menu_title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "menu title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "footernavlinks": {
+        "type": "Group",
+        "config": {
+          "label": "footernavlinks",
+          "repeat": true,
+          "fields": {
+            "footernavpagelink": {
+              "type": "Link",
+              "config": {
+                "label": "footernavpagelink",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": true,
+                "allowText": true,
+                "repeat": false
+              }
+            },
+            "link_text": {
+              "type": "Text",
+              "config": {
+                "label": "link text",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "footernav": {
+        "type": "Group",
+        "config": {
+          "label": "footerNav",
+          "repeat": true,
+          "fields": {
+            "footernavheading": {
+              "type": "StructuredText",
+              "config": {
+                "label": "footernavheading",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "footernavlink1": {
+              "type": "Link",
+              "config": {
+                "label": "footernavlink1",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": true,
+                "allowText": true,
+                "repeat": false
+              }
+            },
+            "footernavsub1": {
+              "type": "Text",
+              "config": {
+                "label": "footernavsub1",
+                "placeholder": ""
+              }
+            },
+            "footernavlink2": {
+              "type": "Link",
+              "config": {
+                "label": "footernavlink2",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": true,
+                "allowText": true,
+                "repeat": false
+              }
+            },
+            "footernavsub2": {
+              "type": "Text",
+              "config": {
+                "label": "footernavsub2",
+                "placeholder": ""
+              }
+            },
+            "footernavlink3": {
+              "type": "Link",
+              "config": {
+                "label": "footernavlink3",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": true,
+                "allowText": true,
+                "repeat": false
+              }
+            },
+            "footernavsub3": {
+              "type": "Text",
+              "config": {
+                "label": "footernavsub3",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "location": {
+        "type": "StructuredText",
+        "config": {
+          "label": "location",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "location_details": {
+        "type": "StructuredText",
+        "config": {
+          "label": "location_details",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "directionlink": {
+        "type": "Link",
+        "config": {
+          "label": "directionlink",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": false
+        }
+      },
+      "directionbuttonlink": {
+        "type": "Text",
+        "config": {
+          "label": "directionbuttonlink",
+          "placeholder": ""
+        }
+      },
+      "contact": {
+        "type": "StructuredText",
+        "config": {
+          "label": "contact",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "telephone": {
+        "type": "StructuredText",
+        "config": {
+          "label": "telephone",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "email": {
+        "type": "StructuredText",
+        "config": {
+          "label": "email",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "whatsapp": {
+        "type": "StructuredText",
+        "config": {
+          "label": "whatsapp",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "rating": {
+        "type": "StructuredText",
+        "config": {
+          "label": "rating",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "rating_text": {
+        "type": "StructuredText",
+        "config": {
+          "label": "rating_text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "instagramlink": {
+        "type": "Link",
+        "config": {
+          "label": "instagramlink",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": false
+        }
+      },
+      "instalinkbutton": {
+        "type": "Text",
+        "config": {
+          "label": "instalinkbutton",
+          "placeholder": ""
+        }
+      },
+      "bookingsites": {
+        "type": "Group",
+        "config": {
+          "label": "bookingsites",
+          "repeat": true,
+          "fields": {
+            "bookinglinks": {
+              "type": "Link",
+              "config": {
+                "label": "bookinglinks",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": true,
+                "allowText": true,
+                "repeat": false
+              }
+            },
+            "bookinglinkbutton": {
+              "type": "Text",
+              "config": {
+                "label": "bookinglinkbutton",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "terratonefooterlogo": {
+        "type": "Image",
+        "config": {
+          "label": "terratonefooterlogo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}

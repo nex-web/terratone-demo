@@ -70,6 +70,385 @@ type ContentRelationshipFieldWithData<
 }[Exclude<TCustomType[number], string>["id"]];
 
 /**
+ * Item in *Footer → footernavlinks*
+ */
+export interface FooterDocumentDataFooternavlinksItem {
+  /**
+   * footernavpagelink field in *Footer → footernavlinks*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footernavlinks[].footernavpagelink
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  footernavpagelink: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * link text field in *Footer → footernavlinks*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footernavlinks[].link_text
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  link_text: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Footer → footerNav*
+ */
+export interface FooterDocumentDataFooternavItem {
+  /**
+   * footernavheading field in *Footer → footerNav*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footernav[].footernavheading
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  footernavheading: prismic.RichTextField;
+
+  /**
+   * footernavlink1 field in *Footer → footerNav*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footernav[].footernavlink1
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  footernavlink1: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * footernavsub1 field in *Footer → footerNav*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footernav[].footernavsub1
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  footernavsub1: prismic.KeyTextField;
+
+  /**
+   * footernavlink2 field in *Footer → footerNav*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footernav[].footernavlink2
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  footernavlink2: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * footernavsub2 field in *Footer → footerNav*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footernav[].footernavsub2
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  footernavsub2: prismic.KeyTextField;
+
+  /**
+   * footernavlink3 field in *Footer → footerNav*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footernav[].footernavlink3
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  footernavlink3: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * footernavsub3 field in *Footer → footerNav*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footernav[].footernavsub3
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  footernavsub3: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Footer → bookingsites*
+ */
+export interface FooterDocumentDataBookingsitesItem {
+  /**
+   * bookinglinks field in *Footer → bookingsites*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.bookingsites[].bookinglinks
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  bookinglinks: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * bookinglinkbutton field in *Footer → bookingsites*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.bookingsites[].bookinglinkbutton
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  bookinglinkbutton: prismic.KeyTextField;
+}
+
+/**
+ * Content for Footer documents
+ */
+interface FooterDocumentData {
+  /**
+   * menu title field in *Footer*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.menu_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  menu_title: prismic.RichTextField;
+
+  /**
+   * footernavlinks field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footernavlinks[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  footernavlinks: prismic.GroupField<
+    Simplify<FooterDocumentDataFooternavlinksItem>
+  >;
+
+  /**
+   * footerNav field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footernav[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  footernav: prismic.GroupField<Simplify<FooterDocumentDataFooternavItem>>;
+
+  /**
+   * location field in *Footer*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.location
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  location: prismic.RichTextField;
+
+  /**
+   * location_details field in *Footer*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.location_details
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  location_details: prismic.RichTextField;
+
+  /**
+   * directionlink field in *Footer*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.directionlink
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  directionlink: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * directionbuttonlink field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.directionbuttonlink
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  directionbuttonlink: prismic.KeyTextField;
+
+  /**
+   * contact field in *Footer*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.contact
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  contact: prismic.RichTextField;
+
+  /**
+   * telephone field in *Footer*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.telephone
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  telephone: prismic.RichTextField;
+
+  /**
+   * email field in *Footer*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.email
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  email: prismic.RichTextField;
+
+  /**
+   * whatsapp field in *Footer*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.whatsapp
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  whatsapp: prismic.RichTextField;
+
+  /**
+   * rating field in *Footer*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.rating
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  rating: prismic.RichTextField;
+
+  /**
+   * rating_text field in *Footer*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.rating_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  rating_text: prismic.RichTextField;
+
+  /**
+   * instagramlink field in *Footer*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.instagramlink
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  instagramlink: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * instalinkbutton field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.instalinkbutton
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  instalinkbutton: prismic.KeyTextField;
+
+  /**
+   * bookingsites field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.bookingsites[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  bookingsites: prismic.GroupField<
+    Simplify<FooterDocumentDataBookingsitesItem>
+  >;
+
+  /**
+   * terratonefooterlogo field in *Footer*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.terratonefooterlogo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  terratonefooterlogo: prismic.ImageField<never>;
+}
+
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<FooterDocumentData>,
+    "footer",
+    Lang
+  >;
+
+/**
  * Item in *head → Navigation Bar*
  */
 export interface HeadDocumentDataNavigationBarItem {
@@ -373,6 +752,7 @@ export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
 export type AllDocumentTypes =
+  | FooterDocument
   | HeadDocument
   | HomepageDocument
   | IntrorevealDocument
@@ -1223,6 +1603,11 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      FooterDocument,
+      FooterDocumentData,
+      FooterDocumentDataFooternavlinksItem,
+      FooterDocumentDataFooternavItem,
+      FooterDocumentDataBookingsitesItem,
       HeadDocument,
       HeadDocumentData,
       HeadDocumentDataNavigationBarItem,
