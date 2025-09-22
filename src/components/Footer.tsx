@@ -26,8 +26,8 @@ export default async function Footer() {
             </div>
             <div>
               <ul className="flex flex-col">
-                {footer.data.footernavlinks.map((item) => (
-                  <li key={item.link_text}>
+                {footer.data.footernavlinks.map((item,index) => (
+                  <li key={index}>
                     <PrismicNextLink
                       field={item.footernavpagelink}
                       className="text-[2.6275rem] leading-11"
@@ -40,9 +40,9 @@ export default async function Footer() {
             </div>
           </div>
           <div className="grid grid-cols-2  border-[#C7C7C7] border border-l-0">
-            {footer.data.footernav.map((item) => (
+            {footer.data.footernav.map((item,index) => (
               <ul>
-                <li key={item.footernavsub1} className="flex flex-col">
+                <li key={index} className="flex flex-col">
                   <PrismicRichText
                     field={item.footernavheading}
                     components={{
