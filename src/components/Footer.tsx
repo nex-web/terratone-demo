@@ -124,7 +124,7 @@ export default async function Footer() {
           </div>
         </div>
         <div>
-          Poke'mon!!
+          Poke&apos;mon!!
         </div>
         <div className="flex justify-center items-center pt-[1.5rem]">
           <FooterLogo />
