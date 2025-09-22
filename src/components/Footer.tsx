@@ -40,8 +40,8 @@ export default async function Footer() {
             </div>
           </div>
           <div className="grid grid-cols-2  border-[#C7C7C7] border border-l-0">
-            {footer.data.footernav.map((item, index) => (
-              <ul>
+            <ul>
+              {footer.data.footernav.map((item, index) => (
                 <li key={`footernav-${index}`} className="flex flex-col">
                   <PrismicRichText
                     field={item.footernavheading}
@@ -72,8 +72,8 @@ export default async function Footer() {
                     {item.footernavsub3}
                   </PrismicNextLink>
                 </li>
-              </ul>
-            ))}
+              ))}
+            </ul>
           </div>
           <div className="border border-[#C7C7C7] border-r-0 border-l-0">
             <div>
